@@ -47,7 +47,7 @@ class MainWindow(QMainWindow, form_class):  # 슬롯 클래스
     def __init__(self):
         super().__init__()
         self.setupUi(self)  # ui 불러오기
-        self.setWindowTitle("비트코인 정보 프로그램 v0.5")
+        self.setWindowTitle("비트코인 정보 프로그램 v0.7")
         self.setWindowIcon((QIcon("icon/bitcoin.png")))
         self.statusBar().showMessage("Upbit api Application v0.7")
 
