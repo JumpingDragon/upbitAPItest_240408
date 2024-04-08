@@ -53,14 +53,14 @@ class MainWindow(QMainWindow, form_class):  # 슬롯 클래스
         self.ubs.start() # 시그널 클래스 run() 실행
 
     def fillCoinData(self, a,b,c,d,e,f,g,h):
-        self.trade_price.setText(f"{a: ,.0f}")
+        self.trade_price.setText(f"{a: ,.0f}")  # trade_price는 ui에 있는 레이블 이름
         self.high_price.setText(f"{b:,.0f}")
         self.low_price.setText(f"{c:,.0f}")
         self.closing_price.setText(f"{d:,.0f}")
-        self.trade_vol.setText(f"{e:,.0f}")
-        self.trade_vol_24.setText(f"{f:,.0f}")
+        self.trade_vol.setText(f"{e:,.3f}")
+        self.trade_vol_24.setText(f"{f:,.3f}")
         self.trade_price_24.setText(f"{g:,.0f}")
-        self.change_rate.setText(f"{h:,.0f}")
+        self.change_rate.setText(f"{h:.2f}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
