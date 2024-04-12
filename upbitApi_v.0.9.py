@@ -24,7 +24,7 @@ class UpbitSignal(QThread):
         self.alive = True
 
     def run(self):
-        while(self.alive): # 무한루프
+        while(self.alive):  # 무한루프
             url = "https://api.upbit.com/v1/ticker"
             param = {"markets": f"KRW-{self.ticker}"}
             # 이와 동일: "https://api.upbit.com/v1/ticker?markets=KRW-BTC"
