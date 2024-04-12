@@ -41,6 +41,7 @@ class UpbitSignal(QThread):
             trade_price_24 = result[0]["acc_trade_price_24h"]  # 비트 코인의 24시간 누적 거래대금
             change_rate = result[0]["signed_change_rate"]  # 비트 코인의 부호가 있는 변화율. +면 증가, -면 감소
 
+            # 메인 윈도우 클래스로 받아온 데이터를 전송
             self.coinDataSent.emit(
                 float(trade_price), float(high_price),
                 float(low_price), float(closing_price),
